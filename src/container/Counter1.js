@@ -6,28 +6,34 @@ class Counter1 extends Component {
         super(props);
         
         this.state ={
-            x:0
+            count:0
         }
     }
 
     handleplus = () =>{
-        this.setState({
-            x: this.state.x+1
-        })
+        if(this.state.count < 5){
+            this.setState({
+                count: this.state.count + 1
+            })
+        }
+        
     }
 
     handleminus = () =>{
-        this.setState({
-            x: this.state.x-1
-        })
+        if(this.state.count > 0){
+            this.setState({
+                count: this.state.count - 1
+            })
+        }
+      
     }
 
     render() {
         return (
             <div>
-                <button onClick={this.handleplus}>+</button>
-                <p>{this.state.x}</p>
-                <button onClick={this.handleminus}>-</button>
+                <button disabled ={this.state.count < 5 ? false :true} onClick={this.handleplus}>+</button>
+                <p>{this.state.count}</p>
+                <button disabled ={this.state.count === 0 ? true : false} onClick={this.handleminus}>-</button>
             </div>
         );
     }
