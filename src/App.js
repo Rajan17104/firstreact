@@ -2,16 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 import Employee from './container/Employee';
 import EmployeeFun from './container/EmployeeFun';
-import Clock from './container/Clock';
-import ClockFun from './container/ClockFun';
+import CounterFun from './container/CounterFun';
+import Counter1 from './container/Counter1';
+import Country from './container/Country';
+import CountryFun from './container/CountryFun';
 
 function App() {
   return (
     <>
-    <ClockFun />
-    {/* <Clock /> */}
-    {/* <Employee />
-    <EmployeeFun /> */}
+    {/* <Counter1 /> */}
+    {/* <Employee /> */}
+    {/* <EmployeeFun /> */}
+    {/* <CounterFun /> */}
+    {/* <Country /> */}
+    <CountryFun />
     </>
   );
 }
