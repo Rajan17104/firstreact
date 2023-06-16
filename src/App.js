@@ -11,11 +11,11 @@ function App() {
   return (
     <>
     {/* <Counter1 /> */}
-    {/* <Employee /> */}
+    <Employee />
     {/* <EmployeeFun /> */}
     {/* <CounterFun /> */}
     {/* <Country /> */}
-    <CountryFun />
+    {/* <CountryFun /> */}
     </>
   );
 }
