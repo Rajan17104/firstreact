@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FamousPlacesFun from './FamousPlacesFun';
+import FamousPlaces from './FamousPlaces';
 
 function CountryFun(props) {
 
@@ -7,7 +7,7 @@ function CountryFun(props) {
 
     return (
         <div>
-            <FamousPlacesFun cname = {countryName} />
+            <FamousPlaces />
         </div>
     );
 }
