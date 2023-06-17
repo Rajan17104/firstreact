@@ -1,3 +1,4 @@
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 import React, { Component } from 'react';
 import { Card, CardBody, CardText, CardTitle, Container, ListGroup, ListGroupItem, Row } from 'reactstrap';
 
@@ -67,7 +68,7 @@ const data = [
         "price": "10.99",
         "keywords": "Google Twill Cap, Google Cap, Google Twill Caps, Google Twill, google cap, google caps, google twill, google twill black cap, google black caps, google caps, black caps, Google Caps",
         "url": " https://loremflickr.com/320/240",
-        "category": "Laptop",
+        "category": "Pc",
         "subcategory": "apparel"
     },
     {
@@ -78,7 +79,7 @@ const data = [
         "price": "9.99",
         "keywords": "Google Fold-over Beanie Grey, gray beanie, grey beanie, Google Beanies, Fold over grey, Google Beanie Grey, Google headgear",
         "url": " https://loremflickr.com/320/240",
-        "category": "Mobile",
+        "category": "Laptop",
         "subcategory": "apparel"
     },
     {
@@ -100,7 +101,7 @@ const data = [
         "price": "18.99",
         "keywords": "Waze Women's Short Sleeve Tee, Waze Short Sleeve Tee, Waze Women's Tees, Waze Women's tee, waze ladies tees, waze ladies tee, waze short sleeve tees, waze short sleeve tee",
         "url": " https://loremflickr.com/320/240",
-        "category": "Laptop",
+        "category": "Mobile",
         "subcategory": "apparel"
     },
     {
@@ -111,7 +112,7 @@ const data = [
         "price": "18.99",
         "keywords": "Waze Men's Short Sleeve Tee, Waze Short Sleeve Tee, Waze Men's Tees, Waze Men's tee, waze mens tees, waze mens tee, waze short sleeve tees, waze short sleeve tee",
         "url": " https://loremflickr.com/320/240",
-        "category": "Mobile",
+        "category": "Pc",
         "subcategory": "apparel"
     },
     {
@@ -158,50 +159,65 @@ const data = [
         "category": "Mobile",
         "subcategory": "drinkware"
     }
+
+    
 ]
 class Product extends Component {
     constructor(props) {
         super(props);
 
        this.state= {
-           data: data
-       }
-
-      
+           Maindata: data,
+           active:false,
+           active1:false,
+           active2:false
+       } 
     }
 
      handleMobile = () =>{
-        // console.log(this.state.data);
-        this.Fdata = this.state.data.map((v) => v.category);
-        if(data === data.category){
-            console.log(data);
-        }
-
-      
-
+        this.Mdata = this.state.Maindata.filter((v) => v.category === 'Mobile');
+        console.log('Mobile',this.Mdata);
+        this.setState({
+           active:true
+        })
      }
-    
+
 
      handleLaptop = () =>{
-
+        this.Ldata = this.state.Maindata.filter((v) => v.category === 'Laptop');
+        console.log('Laptop',this.Ldata);
+        this.setState({
+            active1:true
+        })
      }
 
      handlePc = () =>{
-        
+        this.Pdata = this.state.Maindata.filter((v) => v.category === 'Pc');
+        console.log('Pc',this.Pdata);
+        this.setState({
+            active2:true,
+        });
      }
+
+    //  handledata = () =>{
+    //     this.Fdata = this.state.Maindata.filter((v) => v.category === 'Mobile' ||  'Laptop' || 'Pc');
+    //     console.log(this.Fdata);
+    //  }
 
     render() {
         return (
             <div>
-                <button onClick={this.handleMobile()} style={{width:"80px" , marginRight:"20px" }}>Mobile</button>
-                <button onClick={this.handleLaptop()} style={{width:"80px" ,marginRight:"20px"}}>Laptop</button>
-                <button onClick={this.handlePc()} style={{width:"80px"}}>PC</button>
+                <button onClick={this.handleMobile} style={{width:"80px" , marginRight:"20px", backgroundColor: this.state.active ? "red" : ""}}>Mobile</button>
+                <button onClick={this.handleLaptop} style={{width:"80px" ,marginRight:"20px",  backgroundColor: this.state.active1 ? "green" : "" }}>Laptop</button>
+                <button onClick={this.handlePc} style={{width:"80px" , backgroundColor: this.state.active2 ? "blue" : "" }}>PC</button>
 
+
+                {/* <button onClick={this.handledata} style={{width:"80px" , marginRight:"20px" }}>Mobile</button>
+                <button onClick={this.handledata} style={{width:"80px" ,marginRight:"20px"}}>Laptop</button>
+                <button onClick={this.handledata} style={{width:"80px"}}>PC</button> */}
                 
-                <Container>
-                    <Row>
-
-                        
+                <Container className='proData'>
+                    <Row>  
                         {
                             data.map((v, i) => {
                                 return (
@@ -209,21 +225,23 @@ class Product extends Component {
                                         <div className='col sm-3'>
                                             <Card
                                                 style={{
-                                                    width: '18rem',
+                                                    width: '22rem',
+                                                    border:'2px solid #000',
                                                     borderRadius: '10px',
                                                 }}
                                             >
-                                                <img alt="Card" src="https://loremflickr.com/320/240 "></img>
 
                                                 <CardBody style={{ height: 'auto' }}>
-                                                    <CardTitle tag="h5">
-                                                        {v.name}
-                                                    </CardTitle>
+                                                    
+                                                    <h4>{v.name}</h4>
+
+                                                    <img alt="Card" src="https://loremflickr.com/320/240 "></img>
+
                                                     <CardText style={{ fontSize: '13px' }}>
-                                                        <p>{v.description}</p>
-                                                        <p>features:{v.features}</p>
-                                                        <p>Price:{v.price}</p>
-                                                        <p>category:{v.category}</p>
+                                                        <p> <span style={{fontWeight:'Bold' , fontSize:'13px' }}> Description :</span> {v.description}</p>
+                                                        <p> <span style={{fontWeight:'Bold' , fontSize:'13px'}}> Features :</span> {v.features}</p>
+                                                        <p><span style={{fontWeight:'Bold' , fontSize:'13px'}}> Price :</span> {v.price}</p>
+                                                        <p><span style={{fontWeight:'Bold' , fontSize:'13px'}}> Category :</span> {v.category}</p>
 
                                                     </CardText>
                                                 </CardBody>
@@ -236,6 +254,7 @@ class Product extends Component {
                         }
                     </Row>
                 </Container>
+
 
             </div>
         );

@@ -166,19 +166,19 @@ function ProductFun(props) {
      const [active1, setActive1] = useState(false)
      const [active2, setActive2] = useState(false)
 
+    //  const[data,setData] = useState(data)
+
 
     const handleMobile = () =>{
         setActive(!active);
 
-        let Fdata = data.filter((v) => v.category === "Mobile");
-        if(data === data.Mobile){
-            console.log(data.Mobile);
-        }
+            data.filter((v) => v.category === "Mobile");
+            console.log(data);
     }
 
     const handleLaptop = () =>{
         setActive1(!active1);
-        let Fdata = data.filter((v) => v.category);
+        let Fdata = data.filter((v) => v.category === "Laptop");
         if(data === data.Laptop){
             console.log(Fdata);
         }

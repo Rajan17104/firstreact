@@ -19,8 +19,8 @@ function App() {
     {/* <CounterFun /> */}
     {/* <Country /> */}
     {/* <CountryFun /> */}
-    {/* <Product /> */}
-    <ProductFun />
+    <Product />
+    {/* <ProductFun /> */}
     </>
   );
 }
