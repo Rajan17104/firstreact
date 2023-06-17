@@ -10,11 +10,12 @@ class Employee extends Component {
             Age:50
         }
     }
+
     handleAge = () =>{
         this.setState({
             Age:40
         })
-    }
+    };
     
 
     render() {

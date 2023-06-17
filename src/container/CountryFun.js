@@ -3,7 +3,7 @@ import FamousPlacesFun from './FamousPlacesFun';
 
 function CountryFun(props) {
 
-    const [countryName,steCountryName]= useState('india')
+    const [countryName,setCountryName]= useState('india');
 
     return (
         <div>

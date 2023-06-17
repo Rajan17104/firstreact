@@ -9,15 +9,15 @@ function ClockFun(props) {
         setTime(new Date());
     }
 
-    //Hook
+    //Hook...
     useEffect (() => {
         let timeData = setInterval(tick , 1000);
 
         return() => {
-            clearInterval(timeData)
+            clearInterval(timeData);
         }
 
-    }, [time,setTime])
+    }, [time,setTime]);
 
     //2.  //4.
     return (

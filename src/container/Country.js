@@ -10,7 +10,7 @@ class Country extends Component {
             country_name: 'india'
         }
 
-    }
+    };
     
 
     render() {
@@ -19,7 +19,8 @@ class Country extends Component {
                 <FamousPlaces cname = {this.state.country_name} />
             </div>
         );
-    }
+    };
+    
 }
 
 export default Country;
