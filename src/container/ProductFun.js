@@ -206,21 +206,23 @@ function ProductFun(props) {
                                         <div className='col sm-3'>
                                             <Card
                                                 style={{
-                                                    width: '18rem',
+                                                    width: '22rem',
+                                                    border:'2px solid #000',
                                                     borderRadius: '10px',
                                                 }}
                                             >
-                                                <img alt="Card" src="https://loremflickr.com/320/240 "></img>
 
                                                 <CardBody style={{ height: 'auto' }}>
-                                                    <CardTitle tag="h5">
-                                                        {v.name}
-                                                    </CardTitle>
+                                                    
+                                                    <h4  style={{}}>{v.name}</h4>
+
+                                                    <img alt="Card" src="https://loremflickr.com/320/240 "></img>
+
                                                     <CardText style={{ fontSize: '13px' }}>
-                                                        <p>{v.description}</p>
-                                                        <p>features:{v.features}</p>
-                                                        <p>Price:{v.price}</p>
-                                                        <p>category:{v.category}</p>
+                                                        <p> <span style={{fontWeight:'Bold' , fontSize:'13px' }}> Description :</span> {v.description}</p>
+                                                        <p> <span style={{fontWeight:'Bold' , fontSize:'13px'}}> Features :</span> {v.features}</p>
+                                                        <p><span style={{fontWeight:'Bold' , fontSize:'13px'}}> Price :</span> {v.price}</p>
+                                                        <p><span style={{fontWeight:'Bold' , fontSize:'13px'}}> Category :</span> {v.category}</p>
 
                                                     </CardText>
                                                 </CardBody>
