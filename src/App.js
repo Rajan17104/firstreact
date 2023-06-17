@@ -7,6 +7,8 @@ import Counter1 from './container/Counter1';
 import Country from './container/Country';
 import CountryFun from './container/CountryFun';
 import Product from './container/Product';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductFun from './container/ProductFun';
 
 function App() {
   return (
@@ -17,7 +19,8 @@ function App() {
     {/* <CounterFun /> */}
     {/* <Country /> */}
     {/* <CountryFun /> */}
-    <Product />
+    {/* <Product /> */}
+    <ProductFun />
     </>
   );
 }

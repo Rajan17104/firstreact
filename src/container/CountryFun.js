@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import FamousPlacesFun from './FamousPlacesFun';
+import FamousPlaces from './FamousPlaces';
+
 
 function CountryFun(props) {
 
-    const [countryName,steCountryName]= useState('india')
+    const [countryName,setCountryName]= useState('india')
 
     return (
         <div>
-            <FamousPlacesFun cname = {countryName} />
+            <FamousPlaces />
         </div>
     );
 }

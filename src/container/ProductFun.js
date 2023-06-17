@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+
+import { useState } from 'react';
 import { Card, CardBody, CardText, CardTitle, Container, ListGroup, ListGroupItem, Row } from 'reactstrap';
-
-
 
 const data = [
     {
@@ -159,43 +158,41 @@ const data = [
         "subcategory": "drinkware"
     }
 ]
-class Product extends Component {
-    constructor(props) {
-        super(props);
 
-       this.state= {
-           data: data
-       }
 
-      
+function ProductFun(props) {
+
+     const [active, setActive] = useState(false)
+     const [active1, setActive1] = useState(false)
+     const [active2, setActive2] = useState(false)
+
+
+    const handleMobile = () =>{
+        setActive(!active);
+
+        let Fdata = data.filter((v) => v.category === "Mobile");
+        if(data === data.Mobile){
+            console.log(data.Mobile);
+        }
     }
 
-     handleMobile = () =>{
-        // console.log(this.state.data);
-        this.Fdata = this.state.data.map((v) => v.category);
-        if(data === data.category){
-            console.log(data);
+    const handleLaptop = () =>{
+        setActive1(!active1);
+        let Fdata = data.filter((v) => v.category);
+        if(data === data.Laptop){
+            console.log(Fdata);
         }
+    }
 
-      
+    const handlePc = () =>{
+        setActive2(!active2);
+    }
 
-     }
-    
-
-     handleLaptop = () =>{
-
-     }
-
-     handlePc = () =>{
-        
-     }
-
-    render() {
-        return (
-            <div>
-                <button onClick={this.handleMobile()} style={{width:"80px" , marginRight:"20px" }}>Mobile</button>
-                <button onClick={this.handleLaptop()} style={{width:"80px" ,marginRight:"20px"}}>Laptop</button>
-                <button onClick={this.handlePc()} style={{width:"80px"}}>PC</button>
+    return (
+        <div>
+                <button onClick={handleMobile} style={{width:"80px" , marginRight:"20px" ,backgroundColor: active ? "red" : ""}}>Mobile</button>
+                <button onClick={handleLaptop} style={{width:"80px" ,marginRight:"20px", backgroundColor: active1 ? "green" : ""}}>Laptop</button>
+                <button onClick={handlePc} style={{width:"80px" ,backgroundColor: active2 ? "blue" : ""}}>PC</button>
 
                 
                 <Container>
@@ -238,8 +235,7 @@ class Product extends Component {
                 </Container>
 
             </div>
-        );
-    }
+    );
 }
 
-export default Product;
+export default ProductFun;
