@@ -1,0 +1,2047 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* /10px / 16px = 0.625 =0 62.5  */
+    font-size: 62.5%;
+    /* font-size: 10px; */
+}
+
+body {
+    font-family: 'poppins';
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 141rem;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+
+
+/**********header**********/
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+    z-index: 11;
+}
+
+#main-header a {
+    color: #fff;
+}
+
+header .container {
+    padding: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li:hover {
+    background-color: rgba(97, 91, 91, 0.925);
+    /* border-radius: 1rem;  */
+    color: #000;
+}
+
+header nav ul li ul li,
+header nav ul li ul li a {
+    width: 100%;
+    padding: 1rem;
+}
+
+
+header nav ul li li ul {
+    position: absolute;
+    top: 0;
+    left: 16.2rem;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li ul {
+    /* display: block; */
+    position: absolute;
+    top: 6.2rem;
+    left: 0;
+    background-color: rgba(97, 91, 91, 0.925);
+    display: none;
+    font-size: 2rem;
+
+}
+
+header nav ul li:hover>ul {
+    display: inline-block;
+}
+
+
+
+header nav ul li a {
+    color: #fff;
+    font-size: 1.8rem;
+    /* padding-left: 1.5rem; */
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 2rem 3.3rem;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header .search {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 3.3rem;
+}
+
+.container nav>i,
+#menu>i {
+    display: none;
+}
+
+nav ul li a:hover i {
+    transform: rotate(90deg);
+    transition: all 0.5s;
+}
+
+nav ul li ul li:hover i {
+    transform: rotate(90deg);
+    transition: all 0.5s;
+}
+
+.dark-header {
+    background-color: #000;
+}
+
+/* 
+@media screen and (max-width:768px) {
+    nav>ul {
+        position: absolute;
+        width: 70%;
+        height: 100vh;
+        background-color: skyblue;
+        top: 0;
+        right: 0;
+        transition: all 1s;
+    }
+    header nav ul li {
+        display: block;
+    }
+    header nav ul li ul,
+    header nav ul li ul li ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    header nav ul li ul li>a {
+        padding-left: 40px;
+    }
+    header nav ul li ul li ul li>a {
+        padding-left: 60px;
+    }
+    header nav ul li a {
+        width: 100%;
+    }
+    nav ul>i {
+        padding: 20px;
+        font-size: 20px;
+        float: right;
+        z-index: 999;
+        position: relative;
+        display: inline-block !important;
+    }
+    nav>i {
+        font-size: 20px;
+        padding: 20px;
+        display: inline-block !important;
+    }
+    .showHide {
+        right: -70%;
+    }
+} */
+
+/****************************/
+
+/***********hero section*********/
+
+#hero {
+    background: url(../image/photographer-hand-holding-camera-standing-viewpoint-clouds-panorama-viewpoint-sunrise.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0 0 0 / 0.4);
+}
+
+.hero-data {
+    position: absolute;
+    top: 30%;
+}
+
+
+.hero-data h1 {
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 110px;
+    color: #FFFFFF;
+    margin-bottom: 3rem;
+}
+
+.hero-data p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    color: #CFCFCF;
+    margin-bottom: 3rem;
+}
+
+.hero-data span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 36px;
+    color: #ECECEC;
+}
+
+#hero .search-data {
+    width: 73.6rem;
+    height: 7.8rem;
+    border-radius: 7.2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem 1rem 1rem 2.3rem;
+    margin-bottom: 3rem;
+}
+
+#hero .search-data select {
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #9B9B9B;
+    background: none;
+    line-height: 3.6rem;
+    outline: none;
+    font-family: 'poppins';
+}
+
+#hero .search-data .explore-btn {
+    border: none;
+    padding: 1.8rem 3rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.8rem;
+    border-radius: 7.2rem;
+    font-weight: bold;
+}
+
+.cd-words-wrapper {
+    color: #C8191C;
+}
+
+.cd-headline span{
+    font-size:100px;
+}
+
+.cd-words-wrapper b{
+    /* font-size: 150px; */
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: none !important;
+    background-image: url(style2.css);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.particles-js-canvas-el{
+    position: absolute;
+    top:0;
+}
+
+
+
+/***********************************/
+
+
+
+/*******explore titel***********/
+
+#explore {
+    margin: 17.8rem 0;
+}
+
+.main-titel h2 {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    color: #020202;
+    margin-bottom: 3rem;
+}
+
+.main-titel p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    color: #878787;
+}
+
+
+
+.explore-slider .swiper-slide:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25%);
+    transform: translateY(-1rem);
+    transition: all 0.5s;
+}
+
+#explore .swiper-slide {
+    border-radius: 1rem;
+}
+
+.swiper-slide .card-img {
+    height: 36rem;
+}
+
+.swiper-slide .card-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.swiper-wrapper {
+    padding: 80px 0;
+}
+
+.explore-slider .card-text {
+    position: relative;
+    padding-left: 1.4rem;
+    padding-bottom: 2.6rem;
+}
+
+.explore-slider .card-text h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.explore-slider .card-text p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #555555;
+}
+
+.explore-slider .card-text .explore-circle {
+    width: 8rem;
+    height: 7.6rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    background-color: #fff;
+    box-shadow: 0 4px 31px 0 rgba(0, 0, 0, 14%);
+}
+
+.explore-slider .card-text .explore-circle span {
+    font-weight: 400;
+    font-size: 6rem;
+    color: #000;
+    text-align: center;
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 5;
+}
+
+.swiper-wrapper .card-text {
+    opacity: 0;
+    border-radius: 0 0 1rem 1rem;
+
+}
+
+.explore-slider .swiper-slide:hover .card-text {
+    opacity: 1;
+}
+
+
+.explore-slider .swiper-slide:hover .card-img img {
+    border-radius: 1rem 1rem 0 0;
+    height: 32rem;
+}
+
+.explore-slider-section {
+    position: relative;
+
+}
+
+.explore-slider-section .swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 2.5rem;
+}
+
+
+.explore-slider-section .swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 0;
+    width: 7rem;
+    height: 7rem;
+    color: #727272;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 10%);
+}
+
+
+
+/**********************************/
+
+/*****why*****/
+#why {
+    background-size: 100% 50rem;
+    background-image: url(../image/pexels-mengliu-di-3064079.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#why::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0 0 0 / 0.4);
+    height: 50rem;
+
+}
+
+#why .swiper-slide {
+    border-radius: 1rem;
+    padding-top: 12rem;
+}
+
+#why .why_data {
+    position: relative;
+    z-index: 9;
+}
+
+#why .why_data h2 {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 90px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 2.6rem;
+}
+
+#why .why_data p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    color: #EFEFEF;
+}
+
+.main-titel1 h2 {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3rem;
+    padding-top: 6.6rem;
+}
+
+.main-titel1 p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34 px;
+    text-align: center;
+    color: #878787;
+}
+
+#why .swiper-slide .why_images {
+    box-shadow: 0px 8px 60px 0 rgba(0, 0, 0, 15%);
+}
+
+#why .swiper-wrapper {
+    padding: 46px 3px;
+}
+
+.why_btn .prev-1 {
+    left: 10rem;
+    color: #727272;
+}
+
+.why_btn .next-1 {
+    right: 11rem;
+    color: #727272;
+}
+
+.why_btn .next-1,
+.why_btn .prev-1 {
+    position: absolute;
+    width: 7rem;
+    top: rem;
+    height: 7rem;
+    z-index: 9;
+    padding-top: 2rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 50px 0 rgba(0, .0, 0, 0.3);
+}
+
+.prev-1:after {
+    content: 'prev';
+}
+
+.next-1:after {
+    content: 'next';
+}
+
+.why_btn .prev-1::after,
+.why_btn .next-1::after {
+    font-family: swiper-icons;
+    font-size: 2.7rem;
+    text-transform: none !important;
+    letter-spacing: 0;
+    color: #727272;
+    font-variant: initial;
+    line-height: 1;
+}
+
+
+.why_slider .swiper-slide .why_desc h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 30px;
+
+}
+
+.why_slider .swiper-slide .why_desc p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #858585;
+    margin-top: 15px;
+
+
+}
+
+.why_slider .swiper-slide .why_desc a {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    position: absolute;
+    display: flex;
+    margin-top: 25px;
+}
+
+.why_images {
+    margin: 0 80px;
+    height: 430.75px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.why_desc img {
+    margin: 5px;
+}
+
+
+
+
+/************************************/
+
+/***********our section***************/
+
+#our {
+    margin: 13.8rem 0 17.8rem;
+}
+
+.our-img {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 6rem;
+}
+
+.our-img img {
+    height: 4rem;
+}
+
+/**************************************/
+
+/************client************/
+
+.client-container {
+    margin-left: calc((100% - 141rem) / 2);
+}
+
+#client {
+    margin: 12.8rem 0;
+}
+
+#client .titel {
+    padding-left: 3rem;
+}
+
+#client .titel h3 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 70px;
+    letter-spacing: 0.14em;
+    color: #626262;
+}
+
+#client .titel h2 {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 70px;
+    color: #020202;
+    /* margin-bottom: 1.8rem; */
+}
+
+#client .titel P {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+    color: #626262;
+    margin-bottom: 13rem;
+}
+
+#client .swiper-slide {
+    padding-left: 4rem;
+}
+
+.client-Swiper .swiper-slide .client-mani-slider {
+    /* width: 39.9rem; */
+    height: 43.2rem;
+    background-color: #fff;
+    box-shadow: 0 8PX 60PX 0 rgba(0, .0, 0, 0.15);
+    border-radius: 1rem;
+    padding: 4rem;
+   
+}
+
+
+.swiper-slide .client-img {
+    /* margin-left: 13rem;*/
+    margin-bottom: -6rem; 
+    display: flex;
+    justify-content: center;
+
+}
+
+.client-mani-slider .client-name {
+    text-align: center;
+    padding-top: 20%;
+}
+
+.client-mani-slider .client-name h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+.client-mani-slider .client-name p {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #858585;
+}
+
+.client-mani-slider .client-data {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 6rem;
+    color: #858585;
+}
+
+.client-mani-slider .client-data img {
+    padding-bottom: 1.8rem;
+}
+
+
+.client-slide-section {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.client-slide-section .prev2 {
+    right: 24rem;
+    color: #727272;
+}
+
+.client-slide-section .next2 {
+    right: 10rem;
+    color: #727272;
+}
+
+.client-slide-section .next2,
+.client-slide-section .prev2 {
+    position: absolute;
+    top: -7rem;
+    width: 7rem;
+    height: 7rem;
+    padding-top: 2rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 50px 0 rgba(0, .0, 0, 0.3);
+}
+
+.prev2:after {
+    content: 'prev';
+}
+
+.next2:after {
+    content: 'next';
+}
+
+.client-slide-section .prev2::after,
+.client-slide-section .next2::after {
+    font-family: swiper-icons;
+    font-size: 2.7rem;
+    text-transform: none !important;
+    letter-spacing: 0;
+    color: #727272;
+    font-variant: initial;
+    line-height: 1;
+}
+
+
+/****************************/
+
+
+/*******subcribe*************/
+
+#subcribe {
+    background: url(../image/young-woman-hiker-taking-photo-with-smartphone-mountains-peak-winter.jpg);
+    background-size: 100%;
+    /* height: 54rem; */
+    padding-bottom: 10rem;
+    position: relative;
+    background-repeat: no-repeat;
+}
+#subcribe::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0 0 0 / 0.4);
+
+}
+
+#subcribe .main-subcribe {
+    position: relative;
+    z-index: 9;
+}
+
+.type {
+    width: 67.6rem;
+    height: 6.9rem;
+    background-color: #fff;
+    border-radius: 5rem;
+    margin: 0 auto;
+    margin-top: 8.8rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.type h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+    color: #9B9B9B;
+    padding: 1.7rem;
+}
+
+.type .type-btn {
+    margin: 0.7rem;
+}
+
+.type .type-btn button {
+    border: none;
+    padding: 1.8rem 3rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.8rem;
+    width: 14.6rem;
+    height: 5.5rem;
+    border-radius: 7.2rem;
+
+}
+
+/*****************************/
+
+
+/*********footer section
+**************/
+
+#top {
+    margin: 8rem 0;
+}
+
+.buttom {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.traveller p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    color: #6C6C6C
+}
+
+
+.contact h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000;
+}
+
+.contact ul li a:hover,
+.contact ul li a:hover i {
+    color: #069ABA;
+}
+
+.contact ul li {
+    list-style: none;
+}
+
+.contact ul li a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #6C6C6C;
+    display: inline-block;
+}
+
+.contact ul li i {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.quick h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.quick ul li {
+    list-style: none;
+}
+
+
+.quick ul li a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #6C6C6C;
+}
+
+.quick ul li a:hover {
+    color: #069ABA;
+}
+
+.follow h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+
+.follow a i {
+    font-size: 2rem;
+    padding: 0 1rem 0 0;
+    color: #000;
+}
+
+.follow a i:hover {
+    color: #1A77F2;
+}
+
+.follow a:nth-child(3) i:hover {
+    color: #1D9BF2;
+}
+
+.follow a:last-child i:hover {
+    color: deeppink;
+}
+
+.follow a:nth-child(4) i:hover {
+    color: red;
+}
+
+.copyright p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34px;
+    text-align: center;
+    color: #DFDFDF;
+    background-color: #000;
+    height: 8.9rem;
+    padding-top: 5rem;
+}
+
+/********************/
+
+
+/******responsive***********/
+
+/* 1366 - 1440 (laptop)*/
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: 134rem;
+    }
+
+    header .container {
+        padding: 0.5rem 2rem;
+    }
+
+    header nav ul li {
+        padding: 2rem 2.5rem;
+    }
+
+    #hero {
+        height: 100vh;
+        /* height: 85rem; */
+    }
+
+
+    .hero-data h1 {
+        font-size: 8rem;
+        line-height: 10rem;
+    }
+
+    .hero-data p,
+    .why_slider .swiper-slide .why_desc p,
+    #client .titel P,
+    .search p,
+    .main-titel p,
+    .client-mani-slider .client-data,
+    .main-titel1 p,
+    .client-mani-slider .client-name p {
+        font-size: 16px;
+    }
+
+    #explore {
+        margin: 15.5rem 0;
+    }
+
+    #explore .swiper-wrapper {
+        padding: 50px 0px 60px 0px;
+    }
+
+    .main-titel h2 {
+        font-size: 55px;
+        line-height: 65px;
+        margin-bottom: 2rem;
+    }
+
+    .explore-slider-section .swiper-button-prev,
+    .swiper-button-next {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    #why {
+        margin: 15.5rem 0;
+    }
+
+    #why .why_data h1 {
+        font-size: 55px;
+    }
+
+    #why .why_data p {
+        font-size: 16px;
+        line-height: 34px;
+    }
+
+    .why_images {
+        margin: 0 70px;
+    }
+
+    .why_btn .prev-1,
+    .why_btn .next-1 {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .why_btn .prev-1 {
+        left: 4rem;
+    }
+
+    .why_btn .next-1 {
+        right: 4rem;
+    }
+
+    #our {
+        margin: 10rem 0 10rem;
+    }
+
+    .client-container {
+        margin-left: calc((100% - 134rem) / 2);
+
+    }
+
+   #client .swiper-slide {
+        padding-left: 3rem;
+    }
+
+    #client .titel h2,
+    #why .why_data h2 {
+        font-size: 55px;
+        line-height: 60px;
+    }
+
+    #client .titel h3 {
+        font-size: 28px;
+        line-height: 65px
+    }
+
+    #client .titel P {
+        line-height: 30px;
+    }
+
+    .client-slide-section .prev2 {
+        right: 17rem;
+    }
+
+    .client-slide-section .next2 {
+        right: 4rem;
+    }
+
+    .client-slide-section .next2,
+    .client-slide-section .prev2 {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .main-titel1 h2 {
+        font-size: 55px;
+        margin-bottom: 2rem;
+    }
+
+    .type {
+        margin-top: 6.8rem
+    }
+
+    .traveller1 img {
+        width: 33rem;
+        height: 7rem;
+    }
+
+    .traveller p,
+    .contact ul li a,
+    .quick ul li a {
+        font-size: 16px;
+    }
+
+}
+
+/* 1200 - 1365 (big ipad) */
+@media screen and (max-width: 1365px) {
+    .container {
+        max-width: 95%;
+    }
+
+    /* header .container {
+        padding: 0.5rem 2rem;
+    } */
+
+    header nav ul li {
+        padding: 1.5rem 2rem;
+    }
+
+    header nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    #hero .search-data {
+        width: 64.6rem;
+        height: 6.8rem;
+    }
+
+  
+
+    .hero-data h1 {
+        font-size: 7rem;
+        line-height: 8rem;
+    }
+
+    .hero-data p,
+    .why_slider .swiper-slide .why_desc p,
+    #client .titel P,
+    .search p,
+    .main-titel p,
+    .client-mani-slider .client-data,
+    .main-titel1 p,
+    .client-mani-slider .client-name p {
+        font-size: 15px;
+    }
+
+    #explore {
+        margin: 12.5rem 0;
+    }
+
+    #explore .swiper-wrapper {
+        padding: 80px 0px 60px 0px;
+    }
+
+    .explore-slider .card-text .explore-circle {
+        width: 7rem;
+        height: 6.6rem;
+    }
+
+    .explore-slider .card-text .explore-circle span {
+        padding-top: 0;
+    }
+    .explore-slider .card-text h2 {
+        font-size: 22px;
+    }
+
+    .swiper-slide .card-img img {
+        height: 90%;
+    }
+
+    .main-titel h2 {
+        font-size: 50px;
+        line-height: 60px;
+        margin-bottom: 2rem;
+    }
+
+    .explore-slider-section .swiper-button-prev,
+    .swiper-button-next {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .explore-slider-section .swiper-button-prev:after,
+     .swiper-button-next:after {
+        font-size: 2.2rem;
+    }
+
+    #why {
+        margin: 12.5rem 0;
+    }
+
+    #why .why_data h2 {
+        font-size: 50px;
+        line-height: 35px;
+    }
+
+    #why .why_data p {
+        font-size: 15px;
+        line-height: 35px;
+    }
+
+    .why_slider .swiper-slide .why_desc h4 ,
+    .client-mani-slider .client-name h4 {
+        font-size: 21px;
+    }
+
+    .why_images {
+        margin: 0 60px;
+    }
+
+    .why_images .why_img {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .why_btn .prev-1,
+    .why_btn .next-1 {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .why_btn .prev-1 {
+        left: 2rem;
+    }
+
+    .why_btn .next-1 {
+        right: 2rem;
+    }
+
+    .why_btn .prev-1::after,
+     .why_btn .next-1::after {
+        font-size: 2.2rem;
+    }
+
+    #our {
+        margin: 12.5rem 0;
+    }
+
+    .main-titel p {
+        line-height: 30px;
+    }
+
+    .our-img img {
+        height: 3.5rem;
+    }
+
+    .client-container {
+        margin-left: calc((100% - 95%) / 2);
+
+    }
+
+    #client .titel h2,
+    #why .why_data h2 {
+        font-size: 50px;
+        line-height: 55px;
+    }
+
+    #client .titel h3 {
+        font-size: 28px;
+        line-height: 65px
+    }
+
+    #client .titel P {
+        line-height: 30px;
+    }
+
+    .client-slide-section .prev2 {
+        right: 17rem;
+    }
+
+    .client-slide-section .next2 {
+        right: 4rem;
+    }
+
+    .client-slide-section .next2,
+    .client-slide-section .prev2 {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .client-slide-section .prev2::after,
+     .client-slide-section .next2::after {
+         font-size: 2.2rem;
+     }
+     .main-titel1 h2 {
+        font-size: 50px;
+        margin-bottom: 2rem;
+    }
+    .type {
+        margin-top: 6.8rem
+    }
+
+    .traveller1 img {
+        width: 28rem;
+        height: 7rem;
+    }
+
+    .traveller p,
+    .contact ul li a,
+    .quick ul li a {
+        font-size: 15px;
+    }
+    
+}
+
+
+/* 992 - 1199 (big tablet) */
+@media screen and (max-width: 1199px) {
+    nav>ul {
+        position: absolute;
+        width: 35%;
+        height: 100vh;
+        background-color: rgb(41, 133, 190);
+        top: 0;
+        right: 0;
+        transition: all 1s;
+    }
+
+    nav i{
+        color: #fff;
+    }
+    
+    header nav ul li {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    header .search {
+        color: #fff;
+        font-size: 1.5rem;
+        padding-left: 1.3rem;
+    }
+   
+
+   
+    header nav ul li ul,
+    header nav ul li ul li ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    header nav ul li ul li>a {
+        padding-left: 40px;
+    }
+    header nav ul li ul li ul li>a {
+        padding-left: 60px;
+    }
+    header nav ul li a {
+        width: 100%;
+    }
+    nav ul>i {
+        padding: 20px;
+        font-size: 20px;
+        float: right;
+        z-index: 999;
+        position: relative;
+        display: inline-block !important;
+    }
+    nav>i {
+        font-size: 20px;
+        padding: 20px;
+        display: inline-block !important;
+    }
+    .showHide {
+        right: -70%;
+    }
+
+    .container {
+        max-width: 95%;
+    }
+
+    header nav ul li {
+        padding: 2rem 0rem;
+    }
+
+    header nav ul li a {
+        padding-left: 1.5rem;
+        width: 100%;
+    }
+
+    .hero-data h1 {
+        font-size: 6.5rem;
+        line-height: 7rem;
+    }
+
+    .hero-data p{
+        font-size: 14px;
+        line-height: 2.5rem;
+    }
+
+    header .container {
+        padding: 1rem 2rem;
+    }
+
+    
+    .why_slider .swiper-slide .why_desc p,
+    #client .titel P,
+    .search p,
+    .main-titel p,
+    .client-mani-slider .client-data,
+    .main-titel1 p,
+    .client-mani-slider .client-name p {
+        font-size: 14px;
+    }
+
+    #hero .search-data {
+        width: 59.6rem;
+        height: 6.5rem;
+    }
+
+    #hero .search-data .explore-btn {
+        padding: 1.5rem 2rem;
+    }
+
+    .main-titel h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .explore-slider-section .swiper-button-prev,
+     .swiper-button-next  {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    .explore-slider-section .swiper-button-prev:after,
+    .swiper-button-next:after {
+       font-size: 2rem;
+   }
+
+   .explore-slider .card-text .explore-circle {
+        width: 6.5rem;
+        height: 6.2rem;
+    }
+
+    .explore-slider .card-text h2 {
+        font-size: 21px;
+    }
+
+    .swiper-slide .card-img img {
+        height: 90%;
+    }
+
+    .swiper-slide .card-img img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    #client .titel h2, #why .why_data h2 {
+        font-size: 45px;
+        line-height: 65px;
+    }
+
+    #why .why_data p {
+        font-size: 14px;
+        line-height: 35px;
+    }
+
+    .why_btn .prev-1::after,
+     .why_btn .next-1::after {
+        font-size: 2rem;
+    }
+
+    .why_btn .prev-1 {
+        left: 5rem;
+    }
+
+    .why_btn .next-1{
+        right: 5rem;
+    }
+    .why_btn .prev-1,
+    .why_btn .next-1 {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+    #explore {
+        margin: 11.5rem 0;
+    }
+    #why{
+        margin: 11.5rem 0;
+    }
+    #our{
+        margin: 11.5rem 0;
+    }
+    #client{
+        margin: 11.5rem 0;
+    }
+
+
+    /* .client-slide-section .next2,
+    .client-slide-section .prev2 {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+    .client-slide-section .prev2::after,
+     .client-slide-section .next2::after {
+         font-size: 2rem;
+     } */
+
+     #client {
+        margin: 12.5rem 0;
+    }
+
+     .client-slide-section .prev2 {
+        right: 52rem;
+    }
+
+    .client-slide-section .next2 {
+        right: 38rem;
+    }
+
+    #client .swiper-slide .client-img img {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    #client .swiper-slide {
+        padding: 0 5rem;
+    }
+
+    .our-img {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px 115px;
+    }
+
+    .main-titel1 h2 {
+        font-size: 45px;
+        margin-bottom: 1.5rem;
+    }
+
+    .main-subcribe .type{
+        width: 60rem;
+        /* height: 6.8rem;  */
+    }
+
+    #top {
+        margin: 5rem 0;
+    }
+
+    .traveller1 img {
+        width: 24rem;
+        height: 6rem;
+    }
+
+    .contact h4,
+    .quick h4,
+    .follow h4{
+        font-size: 22px;
+    }
+
+    .traveller p,
+    .contact ul li a,
+    .quick ul li a {
+        font-size: 14px;
+    }
+
+    .traveller{
+        width: 48%;
+    }
+
+    .contact{
+        width: 40%;
+    }
+
+    .quick{
+        width: 20%;
+    }
+
+    .follow{
+        width: 20%;
+    }
+
+}
+
+/* 768 - 991 (big tablet) */
+@media screen and (max-width:991px) {
+    nav>ul {
+        position: absolute;
+        width: 35%;
+        height: 100vh;
+        background-color: rgb(41, 133, 190);
+        top: 0;
+        right: 0;
+        transition: all 1s;
+    }
+
+    nav i{
+        color: #fff;
+    }
+    
+    header nav ul li {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    header .search {
+        color: #fff;
+        font-size: 1.5rem;
+        padding-left: 1.3rem;
+    }
+   
+
+   
+    header nav ul li ul,
+    header nav ul li ul li ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    header nav ul li ul li>a {
+        padding-left: 40px;
+    }
+    header nav ul li ul li ul li>a {
+        padding-left: 60px;
+    }
+    header nav ul li a {
+        width: 100%;
+    }
+    nav ul>i {
+        padding: 20px;
+        font-size: 20px;
+        float: right;
+        z-index: 999;
+        position: relative;
+        display: inline-block !important;
+    }
+    nav>i {
+        font-size: 20px;
+        padding: 20px;
+        display: inline-block !important;
+    }
+    .showHide {
+        right: -70%;
+    }
+
+    .container {
+        max-width: 95%;
+    }
+
+    header nav ul li {
+        padding: 2rem 0rem;
+    }
+
+    header nav ul li a {
+        padding-left: 1.5rem;
+        width: 100%;
+    }
+
+    .hero-data p{
+        font-size: 13px;
+        line-height: 2.5rem;
+    }
+/* 
+    nav > ul{
+        position: absolute;
+        width: 30%;
+        height: 100vh;
+        background-color: skyblue;
+        top: 0;
+        right: 0;
+        transition: all 1s;
+    }
+    header nav ul li  {
+        display: block;
+        width: 100%;
+    }
+    header nav ul li ul, header nav ul li ul li ul{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    header nav ul li ul li, header nav ul li ul li a {
+        width: 100%;
+        padding: 1rem;
+    }
+  
+    nav ul > i{
+        padding: 20px;
+        font-size: 20px; 
+        float: right;
+        z-index: 999;
+        position: relative;
+        display: inline-block !important;
+    }
+    nav > i{
+        font-size: 20px;
+        display: inline-block !important;
+    }
+    .showHide{
+        right:-70%;
+    } */
+
+    
+
+    
+    .why_slider .swiper-slide .why_desc p,
+    #client .titel P,
+    .search p,
+    .main-titel p,
+    .client-mani-slider .client-data,
+    .main-titel1 p,
+    .client-mani-slider .client-name p {
+        font-size: 13px;
+    }
+
+    #hero .search-data {
+        width: 49.6rem;
+        height: 6.2rem;
+    }
+
+    .hero-data h1 {
+        font-size: 6.5rem;
+        line-height: 7rem;
+    }
+
+    .main-titel h2 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    #explore .swiper-wrapper {
+        padding: 111px 0px 60px 0px;
+    }
+
+    .explore-slider-section .swiper-button-prev,
+     .swiper-button-next  {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 2rem;
+    }
+
+    .swiper-slide .card-img img {
+        height: 85%;
+    }
+
+   .explore-slider .card-text .explore-circle {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .explore-slider .card-text h2 {
+        font-size: 21px;
+    }
+
+    
+    
+    #client .titel h2, #why .why_data h2 {
+        font-size: 40px;
+        line-height: 65px;
+    }
+
+    #why {
+        margin: 10.5rem 0;
+    }
+
+    #why .why_data p {
+        font-size: 14px;
+        line-height: 35px;
+    }
+
+    .why_images {
+        margin: 0px 40px;
+    }
+
+    .why_images {
+        padding: 22px;
+    }
+
+    .why_btn .prev-1::after,
+     .why_btn .next-1::after {
+        font-size: 2rem;
+    }
+
+    .why_btn .prev-1,
+    .why_btn .next-1 {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #our .our-img img {
+        width: 12rem;
+        height: 3rem;
+    }
+
+    #client .swiper-wrapper {
+        padding: 40px 0;
+    }
+
+    #client .swiper-slide {
+        padding: 0px 3rem;
+    }
+
+    #client .titel P {
+        line-height: 25px;
+    }
+
+    #client .titel h3 {
+        font-size: 27px;
+        line-height: 40px;
+    }
+
+    .client-slide-section .prev2 {
+        right: 41rem;
+    }
+
+    .client-slide-section .next2, .client-slide-section .prev2 {
+        width: 5rem;
+        height:5rem;
+    }
+    .client-slide-section .next2, .client-slide-section .prev2 {
+        top: -10rem;
+    }
+
+    .client-slide-section {
+        /* padding-top: 1.5rem; */
+    }
+
+    .client-slide-section .prev2::after, .client-slide-section .next2::after {
+        line-height: 0.6;
+    }
+    .client-slide-section .next2 {
+        right: 28rem;
+    }
+
+    .main-titel1 h2 {
+        font-size: 40px;
+        margin-bottom: 1.5rem;
+    }
+
+    #explore {
+        margin: 10.5rem 0;
+    }
+    #why{
+        margin: 10.5rem 0;
+    }
+    #our{
+        margin: 10.5rem 0;
+    }
+    #client{
+        margin: 10.5rem 0;
+    }
+   
+    .traveller1 img {
+        width: 26rem;
+        height: 6.5rem;
+    }
+
+    .contact h4,
+    .quick h4,
+    .follow h4{
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .traveller p,
+    .contact ul li a,
+    .quick ul li a {
+        font-size: 13px;
+    }
+
+    .follow a i {
+        font-size: 1.7rem;
+        padding-right: 0.3rem;
+    }
+
+    .explore-slider .card-text .explore-circle {
+        top: -6.5rem;
+      
+    }
+
+    .explore-slider .card-text .explore-circle span {
+        padding-top: 0.5rem;
+        padding-bottom: 5;
+    }
+
+    .explore-slider .swiper-slide:hover .card-img img {
+        border-radius: 1rem 1rem 0 0;
+        height: 23rem;
+    }
+
+        /* .swiper-wrapper .card-text {
+            opacity: 1;
+            border-radius: 0 0 1rem 1rem;
+        
+        } */
+
+    .swiper-slide .card-img {
+        height: 26rem;
+    }
+
+    .explore-slider .card-text .explore-circle span {
+        font-size: 4rem;
+    }
+
+    .traveller{
+        width: 40%;
+    }
+
+    .contact{
+        width: 40%;
+    }
+
+    .quick{
+        width: 40%;
+    }
+
+    .follow{
+        width: 40%;
+    }
+
+    .follow a i {
+        font-size: 1.5rem;
+        padding: 0  0  0 6px;
+    }
+
+    .buttom{
+        flex-wrap: wrap;
+        row-gap: 4rem;
+    }
+
+    
+} 
+
+ /* 575 - 767 (mobaile landscape) */
+@media screen and (max-width:767px) {
+    
+    #why .why_data p {
+        font-size: 13px;
+        line-height: 35px;
+    }
+
+    .main-subcribe .type {
+        width: 41rem;
+        height: 6.8rem;
+    }
+
+    #hero .search-data {
+        width: 43.6rem;
+        height: 6.2rem;
+    }
+
+    #why .swiper-slide {
+        border-radius: 1rem;
+        padding-top: 10rem;
+    }
+    #why .why_btn{
+        padding-top: 5rem;
+    } 
+
+    .why_btn .next-1, .why_btn .prev-1 {
+        padding-top: 1.5rem;
+    }
+
+    .client-slide-section .prev2 {
+        right: 28rem;
+    }
+
+    .client-slide-section .next2 {
+        right: 15rem;
+    }
+    .type h4 {
+        font-size: 16px;
+        padding: 1.2rem;
+    }
+
+    .main-titel1 h2 {
+        line-height: 38px;
+        padding-top: 1.6rem;
+    }
+
+    .main-subcribe .type {
+        width: 41rem;
+        height: 5.8rem;
+    }
+    .type .type-btn button {
+        height: 4.5rem;
+    }
+
+    .type {
+        margin-top: 1.8rem;
+    }
+    #subcribe .main-subcribe p{
+        font-size: 12px;
+    }
+
+    .type .type-btn button {
+        padding: 0rem 3rem;
+    }
+
+    .traveller1 img {
+        height: 5.2rem;
+    }
+    .copyright p {
+        font-size: 15px;
+    }
+} 
