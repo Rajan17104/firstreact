@@ -1,4 +1,3 @@
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 import React, { Component } from 'react';
 import { Card, CardBody, CardText, CardTitle, Container, ListGroup, ListGroupItem, Row } from 'reactstrap';
 
@@ -178,7 +177,9 @@ class Product extends Component {
         this.Mdata = this.state.Maindata.filter((v) => v.category === 'Mobile');
         console.log('Mobile',this.Mdata);
         this.setState({
-           active:true
+            // Maindata:this.state.Mdata,
+            active:true,
+          
         })
      }
 
@@ -187,7 +188,8 @@ class Product extends Component {
         this.Ldata = this.state.Maindata.filter((v) => v.category === 'Laptop');
         console.log('Laptop',this.Ldata);
         this.setState({
-            active1:true
+            active1:true,
+            // Maindata:this.state.Ldata,
         })
      }
 
@@ -196,13 +198,9 @@ class Product extends Component {
         console.log('Pc',this.Pdata);
         this.setState({
             active2:true,
+            // Maindata:this.state.Pdata,
         });
      }
-
-    //  handledata = () =>{
-    //     this.Fdata = this.state.Maindata.filter((v) => v.category === 'Mobile' ||  'Laptop' || 'Pc');
-    //     console.log(this.Fdata);
-    //  }
 
     render() {
         return (

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardBody, CardText, CardTitle, Container, ListGroup, ListGroupItem, Row } from 'reactstrap';
 
@@ -162,30 +161,42 @@ const data = [
 
 function ProductFun(props) {
 
-     const [active, setActive] = useState(false)
-     const [active1, setActive1] = useState(false)
-     const [active2, setActive2] = useState(false)
 
-    //  const[data,setData] = useState(data)
+    const[maindata,setMainData]= useState(data)
+
+    const [active, setActive] = useState(false)
+    const [active1, setActive1] = useState(false)
+    const [active2, setActive2] = useState(false)
+
+     
 
 
     const handleMobile = () =>{
-        setActive(!active);
 
-            data.filter((v) => v.category === "Mobile");
-            console.log(data);
+        let Mdata = maindata.filter((v) => v.category === 'Mobile');
+        console.log('Mobile',Mdata);
+
+        // setMainData(Mdata);
+
+        setActive(!active);
+       
     }
 
     const handleLaptop = () =>{
         setActive1(!active1);
-        let Fdata = data.filter((v) => v.category === "Laptop");
-        if(data === data.Laptop){
-            console.log(Fdata);
-        }
+       
+        let Ldata = maindata.filter((v) => v.category === 'Laptop');
+        console.log('Laptop',Ldata);
+
+        // setMainData(Ldata);
     }
 
     const handlePc = () =>{
         setActive2(!active2);
+
+        let Pdata = maindata.filter((v) => v.category === 'Pc');
+        console.log('Pc',Pdata);
+        // setMainData(Pdata);
     }
 
     return (
@@ -197,8 +208,6 @@ function ProductFun(props) {
                 
                 <Container>
                     <Row>
-
-                        
                         {
                             data.map((v, i) => {
                                 return (
