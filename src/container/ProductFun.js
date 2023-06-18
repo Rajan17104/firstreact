@@ -162,54 +162,65 @@ const data = [
 function ProductFun(props) {
 
 
-    const[maindata,setMainData]= useState(data)
+    const[maindata,setMaindata]= useState(data)
 
     const [active, setActive] = useState(false)
     const [active1, setActive1] = useState(false)
     const [active2, setActive2] = useState(false)
 
+    // const [color, setColor] = useState('red');
      
 
 
-    const handleMobile = () =>{
+    // const handleMobile = () =>{
+    //     setActive(!active);
 
-        let Mdata = maindata.filter((v) => v.category === 'Mobile');
-        console.log('Mobile',Mdata);
+    //     let Mdata = maindata.filter((v) => v.category === 'Mobile');
+    //     console.log('Mobile',Mdata);
 
-        // setMainData(Mdata);
+    //     setMainData(Mdata);
+       
+    // }
 
+    // const handleLaptop = () =>{
+    //     setActive1(!active1);
+       
+    //     let Ldata = maindata.filter((v) => v.category === 'Laptop');
+    //     console.log('Laptop',Ldata);
+
+    //     // setMainData(Ldata);
+    // }
+
+    // const handlePc = () =>{
+    //     setActive2(!active2);
+
+    //     let Pdata = maindata.filter((v) => v.category === 'Pc');
+    //     console.log('Pc',Pdata);
+    //     // setMainData(Pdata);
+    // }
+
+    const handleProduct = (cateData) =>{
+        let productData = data.filter((v) => v.category === cateData);
+        setMaindata(productData);
         setActive(!active);
-       
-    }
-
-    const handleLaptop = () =>{
         setActive1(!active1);
-       
-        let Ldata = maindata.filter((v) => v.category === 'Laptop');
-        console.log('Laptop',Ldata);
-
-        // setMainData(Ldata);
-    }
-
-    const handlePc = () =>{
         setActive2(!active2);
-
-        let Pdata = maindata.filter((v) => v.category === 'Pc');
-        console.log('Pc',Pdata);
-        // setMainData(Pdata);
     }
+
 
     return (
-        <div>
-                <button onClick={handleMobile} style={{width:"80px" , marginRight:"20px" ,backgroundColor: active ? "red" : ""}}>Mobile</button>
-                <button onClick={handleLaptop} style={{width:"80px" ,marginRight:"20px", backgroundColor: active1 ? "green" : ""}}>Laptop</button>
-                <button onClick={handlePc} style={{width:"80px" ,backgroundColor: active2 ? "blue" : ""}}>PC</button>
 
                 
+        <div>
+                
+        <button onClick={() =>handleProduct('Mobile')} style={{width:"80px" , marginRight:"20px" ,backgroundColor: active ? "red" : "" }}>Mobile</button>
+        <button onClick={() =>handleProduct('Laptop')} style={{width:"80px" ,marginRight:"20px" ,backgroundColor: active1 ? "green" : "" }}>Laptop</button>
+        <button onClick={() =>handleProduct('Pc')} style={{width:"80px" ,backgroundColor: active2 ? "blue" : "" }}>PC</button>
                 <Container>
+        
                     <Row>
                         {
-                            data.map((v, i) => {
+                            maindata.map((v, i) => {
                                 return (
                                     <>
                                         <div className='col sm-3'>
@@ -220,12 +231,16 @@ function ProductFun(props) {
                                                     borderRadius: '10px',
                                                 }}
                                             >
+                                                <img alt="Card" src="https://loremflickr.com/320/240 "></img>
+
 
                                                 <CardBody style={{ height: 'auto' }}>
                                                     
-                                                    <h4  style={{}}>{v.name}</h4>
+                                                    {/* <h4  style={{}}>{v.name}</h4> */}
+                                                    <CardTitle tag="h5">
+                                                        {v.name}
+                                                    </CardTitle>
 
-                                                    <img alt="Card" src="https://loremflickr.com/320/240 "></img>
 
                                                     <CardText style={{ fontSize: '13px' }}>
                                                         <p> <span style={{fontWeight:'Bold' , fontSize:'13px' }}> Description :</span> {v.description}</p>

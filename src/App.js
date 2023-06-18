@@ -9,6 +9,7 @@ import CountryFun from './container/CountryFun';
 import Product from './container/Product';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductFun from './container/ProductFun';
+import ExFun1 from './container/ExFun1';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
     {/* <CounterFun /> */}
     {/* <Country /> */}
     {/* <CountryFun /> */}
-    <Product />
-    {/* <ProductFun /> */}
+    {/* <Product /> */}
+    <ProductFun />
+    {/* <ExFun1 /> */}
     </>
   );
 }
