@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card, CardBody, CardText, CardTitle, Container, ListGroup, ListGroupItem, Row } from 'reactstrap';
+import { Card, CardBody, CardText, CardTitle, Container, Button, ListGroup, ListGroupItem, Row } from 'reactstrap';
 
 const data = [
     {
@@ -27,7 +27,7 @@ const data = [
     {
         "id": "GGOEGEBK094499",
         "name": "Google Bot",
-        "description": "This Google Bot can hold multiple poses making it a fun toy for all. Fold the Google Bot back up into a perfect cube when you are done playing.",
+        "description": "This Google Bot can hold multiple poses making it a fun toy for all. Fold the Google Bot back up into a perfect cube when you are .",
         "features": "Made of wood 2.5 x 2.5 inch cube 6.75 inch tall Recommended for Ages 3+",
         "price": "9.99",
         "keywords": "Google Bot, google bot, bots, natural bots, wood bot, google wood bot",
@@ -39,7 +39,7 @@ const data = [
         "id": "GGOEGFKA086699",
         "name": "Google Emoji Sticker Pack",
         "description": "Who doesn't use emojis? Decorate your space with your current mood!",
-        "features": "Pack contains two sticker sheets Each Sheet has different emojis Decal dimensions should fit in a maximum sheet size of 12 3/4 x 17 1/2 inch.",
+        "features": "Pack contains two sticker sheets Each Sheet has different emojis Decal dimensions should fit in a maximum sheet size of 12 3/4 x",
         "price": "4.99",
         "keywords": "Google Emoji Sticker Pack, Google sticker pack, emoji sticker pack, google emoji, stickers, pack of sticker, pack of emoji stickers",
         "url": " https://loremflickr.com/320/240",
@@ -49,8 +49,8 @@ const data = [
     {
         "id": "GGOEWCKQ085457",
         "name": "Waze Pack of 9 Decal Set",
-        "description": "Can't decide which Waze decal to get? We have made that decision easier for you! Now you can purchase a pack of nine Waze Mood Decals!",
-        "features": "Pack of 9 includes: 3 Waze Mood Happy decals 3 Waze Mood Original decals 3 Waze Mood Ninja decals",
+        "description": "Can't decide which Waze decal to get? We have made that decision easier for you!!",
+        "features": "Pack of 9 includes: 3 Waze Mood Happy decals 3 Waze Mood ",
         "price": "16.99",
         "keywords": "Waze Pack of 9 Decal Set, decals pack, packs of 9, Waze Packs, Waze Decals, waze, Waze",
         "url": " https://loremflickr.com/320/240",
@@ -60,7 +60,7 @@ const data = [
     {
         "id": "GGOEGHPB071610",
         "name": "Google Twill Cap",
-        "description": "Classic urban styling distinguishes this Google cap. Retains its shape, even when not being worn.",
+        "description": "Classic urban styling distinguishes this Google cap. Retains its shape, even whe.",
         "features": "Heavy weight brushed twill Adjustable velcro closure One size fits all",
         "price": "10.99",
         "keywords": "Google Twill Cap, Google Cap, Google Twill Caps, Google Twill, google cap, google caps, google twill, google twill black cap, google black caps, google caps, black caps, Google Caps",
@@ -107,7 +107,7 @@ const data = [
         "description": "Made of soft tri-blend jersey fabric, this great t-shirt will help you find your Waze. Made in USA.",
         "features": " Jersey knit 37.5% cotton, 50% polyester, 12.5% rayon Made in the USA",
         "price": "18.99",
-        "keywords": "Waze Men's Short Sleeve Tee, Waze Short Sleeve Tee, Waze Men's Tees, Waze Men's tee, waze mens tees, waze mens tee, waze short sleeve tees, waze short sleeve tee",
+        "keywords": "Waze Men's Short Sleeve Tee, Waze Short Sleeve Tee, Waze Men's Tees,",
         "url": " https://loremflickr.com/320/240",
         "category": "Mobile",
         "subcategory": "apparel"
@@ -115,8 +115,8 @@ const data = [
     {
         "id": "GGOEGBRJ037399",
         "name": "Google Rucksack",
-        "description": "Choose to carry your belongings and presentations to your next meeting with the Google Mistral Rucksack!",
-        "features": " Size: 13.5 x 6.5 x 17.5 Ergonomic padded shoulder straps Large main compartment with internal laptop compartment Easy Snap and Adjustable straps for main compartment access",
+        "description": "Choose to carry your belongings and presentations to your",
+        "features": " Size: 13.5 x 6.5 x 17.5 Ergonomic padded shoulder straps Large main compartment with internal laptop compartment Easy",
         "price": "79.99",
         "keywords": "Mistral Rucksack, Mistral backpack, Mistral Backpack, backpack, bags, bag, Backpack, backpacks, packs, office gear, Bag, Bags, Google Backpack, google backpack, g, google",
         "url": " https://loremflickr.com/320/240",
@@ -126,8 +126,8 @@ const data = [
     {
         "id": "GGOEGDHJ087399",
         "name": "Google Rolltop Backpack Blue",
-        "description": "This stylish Google rolltop backpack will help keep all of your favorite items organized and together while you're on the move.",
-        "features": "Size: 12 inches wide x 18.5 inches height x 5.3 inches depth TPU Liner Internal Organizer for Pens, Phones and Other Small Items Large Main Compartment Flap Closure for Quick Access or Roll-Top for Expandable Volume and Weather Protection",
+        "description": "This stylish Google rolltop backpack will help keep all of your favorite items organized",
+        "features": "Size: 12 inches wide x 18.5 inches height x 5.3 inches depth TPU Liner Internal Organizer for Pens, Phones and Other Small Items ",
         "price": "149.99",
         "keywords": "Google Rolltop Backpack Blue, google backpack, google blue backpack, blue rolltop, Google rolltop, Blue Backpack, backpack, rolltop",
         "url": " https://loremflickr.com/320/240",
@@ -138,9 +138,9 @@ const data = [
         "id": "GGOEADHB085999",
         "name": "Android Trace Bottle Black",
         "description": "Stay hydrated throughout the day with this Android Trace Bottle. 17 oz.",
-        "features": "17 oz. double wall thermal bottle Stainless steel Threaded stainless steel insulated lid Copper vacuum insulation",
+        "features": "17 oz. double wall thermal bottle Stainless steel Threaded stainless steel insulated ",
         "price": "23.99",
-        "keywords": "Android Black Force 17 oz Bottle, android bottles, android black bottle, android 17 oz bottle, android black force bottle, android 17 oz Android Black Force Bottle, Android Trace Bottle Black",
+        "keywords": "Android Black Force 17 oz Bottle, android bottles, android black bottle, android 17 oz bottle, android black force bottle, Black",
         "url": " https://loremflickr.com/320/240",
         "category": "Laptop",
         "subcategory": "drinkware"
@@ -162,105 +162,96 @@ const data = [
 function ProductFun(props) {
 
 
-    const[maindata,setMaindata]= useState(data)
+    const [maindata, setMaindata] = useState(data)
 
-    const [active, setActive] = useState(false)
-    const [active1, setActive1] = useState(false)
-    const [active2, setActive2] = useState(false)
+    const [active, setActive] = useState('')
 
-    // const [color, setColor] = useState('red');
-     
-
-
-    // const handleMobile = () =>{
-    //     setActive(!active);
-
-    //     let Mdata = maindata.filter((v) => v.category === 'Mobile');
-    //     console.log('Mobile',Mdata);
-
-    //     setMainData(Mdata);
-       
-    // }
-
-    // const handleLaptop = () =>{
-    //     setActive1(!active1);
-       
-    //     let Ldata = maindata.filter((v) => v.category === 'Laptop');
-    //     console.log('Laptop',Ldata);
-
-    //     // setMainData(Ldata);
-    // }
-
-    // const handlePc = () =>{
-    //     setActive2(!active2);
-
-    //     let Pdata = maindata.filter((v) => v.category === 'Pc');
-    //     console.log('Pc',Pdata);
-    //     // setMainData(Pdata);
-    // }
-
-    const handleProduct = (cateData) =>{
+    const handleProduct = (cateData) => {
         let productData = data.filter((v) => v.category === cateData);
         setMaindata(productData);
-        setActive(!active);
-        setActive1(!active1);
-        setActive2(!active2);
+        setActive(cateData);
     }
 
 
     return (
 
-                
+
         <div>
-                
-        <button onClick={() =>handleProduct('Mobile')} style={{width:"80px" , marginRight:"20px" ,backgroundColor: active ? "red" : "" }}>Mobile</button>
-        <button onClick={() =>handleProduct('Laptop')} style={{width:"80px" ,marginRight:"20px" ,backgroundColor: active1 ? "green" : "" }}>Laptop</button>
-        <button onClick={() =>handleProduct('Pc')} style={{width:"80px" ,backgroundColor: active2 ? "blue" : "" }}>PC</button>
-                <Container>
-        
-                    <Row>
-                        {
-                            maindata.map((v, i) => {
-                                return (
-                                    <>
-                                        <div className='col sm-3'>
-                                            <Card
-                                                style={{
-                                                    width: '22rem',
-                                                    border:'2px solid #000',
-                                                    borderRadius: '10px',
-                                                }}
-                                            >
-                                                <img alt="Card" src="https://loremflickr.com/320/240 "></img>
 
+            <div className='text-center'>
 
-                                                <CardBody style={{ height: 'auto' }}>
-                                                    
-                                                    {/* <h4  style={{}}>{v.name}</h4> */}
-                                                    <CardTitle tag="h5">
-                                                        {v.name}
-                                                    </CardTitle>
+            <h1 className='m-10'>Product </h1>
 
-
-                                                    <CardText style={{ fontSize: '13px' }}>
-                                                        <p> <span style={{fontWeight:'Bold' , fontSize:'13px' }}> Description :</span> {v.description}</p>
-                                                        <p> <span style={{fontWeight:'Bold' , fontSize:'13px'}}> Features :</span> {v.features}</p>
-                                                        <p><span style={{fontWeight:'Bold' , fontSize:'13px'}}> Price :</span> {v.price}</p>
-                                                        <p><span style={{fontWeight:'Bold' , fontSize:'13px'}}> Category :</span> {v.category}</p>
-
-                                                    </CardText>
-                                                </CardBody>
-                                            </Card>
-
-                                        </div>
-                                    </>
-                                )
-                            })
-                        }
-                    </Row>
-                </Container>
-
+                <Button 
+                 onClick={() => handleProduct('Mobile')}
+                    color="primary"
+                    style={{width:'60px' ,height:'30px' , marginRight:'10px' ,marginBottom:'20px' ,fontSize:'15px'}}
+                    outline={active === 'Mobile' ? false : true}
+                >
+                    Mobile
+                </Button>
+                <Button
+                 onClick={() => handleProduct('Laptop')}
+                    color="primary"
+                    style={{width:'60px' ,height:'30px' , marginRight:'10px',marginBottom:'20px',fontSize:'15px'}}
+                    outline={active === 'Laptop' ? false : true}
+                >
+                    Laptop
+                </Button>
+                <Button
+                 onClick={() => handleProduct('Pc')}
+                    color="primary"
+                    style={{width:'60px' ,height:'30px' , marginRight:'10px',marginBottom:'20px',fontSize:'15px'}}
+                    outline={active === 'Pc' ? false : true}
+                >
+                    Pc
+                </Button>
             </div>
+
+            <Container className=''>
+
+                <Row>
+                    {
+                        maindata.map((v, i) => {
+                            return (
+                                <>
+                                    <div className='col-md-3  gy-4' >
+                                        <Card
+                                            style={{
+                                                border: '2px solid #000',
+                                                borderRadius: '10px',
+                                            }}
+                                        >
+                                            <img alt="Card" src="https://loremflickr.com/320/240 "></img>
+
+
+                                            <CardBody style={{ height: 'auto' }}>
+
+                                                {/* <h4  style={{}}>{v.name}</h4> */}
+                                                <CardTitle tag="h5">
+                                                    {v.name}
+                                                </CardTitle>
+
+
+                                                <CardText style={{ fontSize: '13px' }}>
+                                                    <p> <span style={{ fontWeight: 'Bold', fontSize: '13px' }}> Description :</span> {v.description}</p>
+                                                    <p> <span style={{ fontWeight: 'Bold', fontSize: '13px' }}> Features :</span> {v.features}</p>
+                                                    <p><span style={{ fontWeight: 'Bold', fontSize: '13px' }}> Price :</span> {v.price}</p>
+                                                    <p><span style={{ fontWeight: 'Bold', fontSize: '13px' }}> Category :</span> {v.category}</p>
+
+                                                </CardText>
+                                            </CardBody>
+                                        </Card>
+
+                                    </div>
+                                </>
+                            )
+                        })
+                    }
+                </Row>
+            </Container>
+
+        </div>
     );
 }
 
