@@ -27,7 +27,7 @@ function App() {
     {/* <Product /> */}
     {/* <ProductFun /> */}
     {/* <ExFun1 /> */}
-    <Main />
+    {/* <Main /> */}
     </>
   );
 }
