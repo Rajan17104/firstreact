@@ -8,4 +8,4 @@ function FamousPlacesFun(props) {
     );
 }
 
-export default FamousPlacesFun;
+export default FamousPlacesFun; 

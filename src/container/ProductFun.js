@@ -161,10 +161,9 @@ const data = [
 
 function ProductFun(props) {
 
+    const [active, setActive] = useState('')
 
     const [maindata, setMaindata] = useState(data)
-
-    const [active, setActive] = useState('')
 
     const handleProduct = (cateData) => {
         let productData = data.filter((v) => v.category === cateData);
