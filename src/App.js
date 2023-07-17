@@ -11,24 +11,31 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductFun from './container/ProductFun';
 import ExFun1 from './container/ExFun1';
 import Main from './pages/Main';
+import { Provider } from 'react-redux';
+import { configureStore } from './Redux/Store';
+import Counter from './container/Counter/Counter';
 
 
 
 
 function App() {
+
+  const store = configureStore() ;
+
   return (
-    <>
-    {/* <Counter1 /> */}
-    {/* <Employee /> */}
-    {/* <EmployeeFun /> */}
-    {/* <CounterFun /> */}
-    {/* <Country /> */}
-    {/* <CountryFun /> */}
-    {/* <Product /> */}
-    {/* <ProductFun /> */}
-    {/* <ExFun1 /> */}
-    {/* <Main /> */}
-    </>
+      <Provider store={store}>
+        {/* <Counter1 /> */}
+        {/* <Employee /> */}
+        {/* <EmployeeFun /> */}
+        {/* <CounterFun /> */}
+        {/* <Country /> */}
+        {/* <CountryFun /> */}
+        {/* <Product /> */}
+        {/* <ProductFun /> */}
+        {/* <ExFun1 /> */}
+        <Counter />
+        {/* <Main /> */}
+      </Provider>
   );
 }
 
